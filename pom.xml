@@ -240,8 +240,8 @@
 				<configuration>
 					<arguments>-Dmaven.javadoc.skip=true</arguments>
 					<scmCommentPrefix>[RELEASE]</scmCommentPrefix>
-					<tagNameFormat>${version}</tagNameFormat>
 					<!-- TODO extract this to separate profile activated only when initialize phase has ran-->
+					<tagNameFormat>${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}</tagNameFormat>
 					<developmentVersion>${parsedVersion.majorVersion}.${parsedVersion.nextMinorVersion}.0-SNAPSHOT</developmentVersion>
 				</configuration>
 			</plugin>
