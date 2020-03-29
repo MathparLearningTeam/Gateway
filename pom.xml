@@ -196,26 +196,36 @@
 				<groupId>com.spotify</groupId>
 				<artifactId>docker-maven-plugin</artifactId>
 				<version>1.2.1</version>
-				<configuration>
-					<dockerDirectory>docker</dockerDirectory>
-					<image>registry.gitlab.com/mathpar/learning/gateway</image>
-					<imageName>registry.gitlab.com/mathpar/learning/gateway</imageName>
-					<newName>registry.gitlab.com/mathpar/learning/gateway</newName>
-					<forceTags>true</forceTags>
-					<resources>
-						<resource>
-							<targetPath>/</targetPath>
-							<directory>${project.build.directory}</directory>
-							<include>${project.build.finalName}.war</include>
-						</resource>
-					</resources>
-					<imageTags>
-						<imageTag>${project.version}</imageTag>
-						<imageTag>latest</imageTag>
-					</imageTags>
-					<serverId>gitlab-mathpar</serverId>
-					<registryUrl>https://registry.gitlab.com</registryUrl>
-				</configuration>
+				<executions>
+					<execution>
+						<phase>deploy</phase>
+						<goals>
+							<goal>build</goal>
+							<goal>tag</goal>
+							<goal>push</goal>
+						</goals>
+						<configuration>
+							<dockerDirectory>docker</dockerDirectory>
+							<image>registry.gitlab.com/mathpar/learning/gateway</image>
+							<imageName>registry.gitlab.com/mathpar/learning/gateway</imageName>
+							<newName>registry.gitlab.com/mathpar/learning/gateway</newName>
+							<forceTags>true</forceTags>
+							<resources>
+								<resource>
+									<targetPath>/</targetPath>
+									<directory>${project.build.directory}</directory>
+									<include>${project.build.finalName}.war</include>
+								</resource>
+							</resources>
+							<imageTags>
+								<imageTag>${project.version}</imageTag>
+								<imageTag>latest</imageTag>
+							</imageTags>
+							<serverId>gitlab-mathpar</serverId>
+							<registryUrl>https://registry.gitlab.com</registryUrl>
+						</configuration>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
