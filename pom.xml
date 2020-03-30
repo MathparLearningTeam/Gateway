@@ -144,7 +144,7 @@
 						</goals>
 						<configuration>
 							<includes>
-								<include>mathpar.client:bundle:jar:*</include>
+								<include>mathpar.web.learning:client:jar:*:*</include>
 							</includes>
 							<serverId>github-mathpar</serverId>
 						</configuration>
@@ -182,8 +182,9 @@
 							<goal>unpack-dependencies</goal>
 						</goals>
 						<configuration>
-							<includeGroupIds>mathpar.client</includeGroupIds>
-							<includeArtifactIds>bundle</includeArtifactIds>
+							<includeGroupIds>mathpar.web.learning</includeGroupIds>
+							<includeArtifactIds>client</includeArtifactIds>
+							<includeTypes>jar</includeTypes>
 							<outputDirectory>
 								${project.build.directory}/classes/assets
 							</outputDirectory>

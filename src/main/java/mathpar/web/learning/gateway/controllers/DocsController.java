@@ -1,4 +1,4 @@
-package mathpar.web.learning.gateway;
+package mathpar.web.learning.gateway.controllers;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,7 +12,7 @@ public class DocsController {
     @GetMapping("/swagger-resources")
     public List<SwaggerResource> getResources(){
         return List.of(
-                new SwaggerResource("Authentication API", "/authentication/docs", "2.0", "/authentication/docs"),
+                new SwaggerResource("Account API", "/account/docs", "2.0", "/account/docs"),
                 new SwaggerResource("School API", "/school/docs", "2.0", "/school/docs")
         );
     }
