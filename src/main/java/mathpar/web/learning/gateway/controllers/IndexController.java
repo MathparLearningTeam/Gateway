@@ -1,4 +1,4 @@
-package mathpar.web.learning.gateway;
+package mathpar.web.learning.gateway.controllers;
 
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.web.bind.annotation.GetMapping;

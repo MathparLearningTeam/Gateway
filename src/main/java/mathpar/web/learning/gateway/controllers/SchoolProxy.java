@@ -1,4 +1,4 @@
-package mathpar.web.learning.gateway;
+package mathpar.web.learning.gateway.controllers;
 
 import mathpar.web.learning.gateway.utils.MathparProperties;
 import org.springframework.http.RequestEntity;
