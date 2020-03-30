@@ -184,6 +184,7 @@
 						<configuration>
 							<includeGroupIds>mathpar.web.learning</includeGroupIds>
 							<includeArtifactIds>client</includeArtifactIds>
+							<includeTypes>jar</includeTypes>
 							<outputDirectory>
 								${project.build.directory}/classes/assets
 							</outputDirectory>
