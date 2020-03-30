@@ -95,7 +95,7 @@
 			<groupId>mathpar.web.learning</groupId>
 			<artifactId>client</artifactId>
 			<scope>compile</scope>
-			<version>0.2.0</version>
+			<version>0.9.1</version>
 		</dependency>
 	</dependencies>
 
