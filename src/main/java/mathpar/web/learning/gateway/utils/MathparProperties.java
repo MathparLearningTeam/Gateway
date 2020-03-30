@@ -14,7 +14,7 @@ public class MathparProperties {
 
     public void loadPropertiesFromManager(String prefix) {
         RestTemplate restTemplate = new RestTemplate();
-        var namespaceProperties = restTemplate.getForObject(prefix+"/getNamespaceProperties?namespace=frontend", FrontendProperties.class);
+        var namespaceProperties = restTemplate.getForObject(prefix+"/getNamespaceProperties?namespace=gateway", FrontendProperties.class);
         if(namespaceProperties==null) throw new RuntimeException("Can't load authentication properties");
         this.schoolModulePrefix = namespaceProperties.schoolUrl;
         this.accountModulePrefix = namespaceProperties.accountUrl;
