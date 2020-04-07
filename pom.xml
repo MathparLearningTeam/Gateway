@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>mathpar.web.learning</groupId>
 	<artifactId>gateway</artifactId>
-	<version>0.6.0-SNAPSHOT</version>
+	<version>0.7.0-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>Gateway service</name>
 	<description>This module is responsible for hosting static, proxying rest requests and serving front framework assets.</description>
