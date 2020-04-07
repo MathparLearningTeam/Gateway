@@ -23,7 +23,8 @@ public class DocsController {
     public List<SwaggerResource> getResources(){
         return List.of(
                 new SwaggerResource("Account API", "/account/docs", "2.0", "/account/docs"),
-                new SwaggerResource("School API", "/school/docs", "2.0", "/school/docs")
+                new SwaggerResource("School API", "/school/docs", "2.0", "/school/docs"),
+                new SwaggerResource("Tasks API", "/tasks/docs", "2.0", "/tasks/docs")
         );
     }
 
@@ -45,6 +46,11 @@ public class DocsController {
     @GetMapping(path = "/school/docs")
     public ResponseEntity<Object> proxySchoolDocsRequest(){
         return restTemplate.getForEntity(mathparProperties.getSchoolModulePrefix()+"/v2/api-docs", Object.class);
+    }
+
+    @GetMapping(path = "/tasks/docs")
+    public ResponseEntity<Object> proxyTasksDocsRequest(){
+        return restTemplate.getForEntity(mathparProperties.getTasksModulePrefix()+"/v2/api-docs", Object.class);
     }
 
     @Getter
