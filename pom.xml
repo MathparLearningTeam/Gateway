@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>mathpar.web.learning</groupId>
 	<artifactId>gateway</artifactId>
-	<version>0.11.0-SNAPSHOT</version>
+	<version>0.11.0</version>
 	<packaging>war</packaging>
 	<name>Gateway service</name>
 	<description>This module is responsible for hosting static, proxying rest requests and serving front framework assets.</description>
@@ -11,14 +11,14 @@
 	<scm>
 		<url>https://github.com/MathparLearningTeam/Gateway</url>
 		<developerConnection>svm:git:https://github.com/MathparLearningTeam/Gateway</developerConnection>
-		<tag>0.1.0-SNAPSHOT</tag>
+		<tag>0.11.0</tag>
 	</scm>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.2.0.RELEASE</version>
-		<relativePath/>
+		<relativePath />
 	</parent>
 
 	<properties>
@@ -95,7 +95,7 @@
 			<groupId>mathpar.web.learning</groupId>
 			<artifactId>client</artifactId>
 			<scope>compile</scope>
-			<version>0.12.0</version>
+			<version>0.15.0</version>
 		</dependency>
 	</dependencies>
 
